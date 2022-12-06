@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Sum and average"
-export file=$1;
+file=$1;
 sum=0
 
 if [ ! $# -eq 1 ];
