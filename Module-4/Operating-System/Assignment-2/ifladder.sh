@@ -2,7 +2,10 @@
 
 num1=$1
 num2=$2
+ok=$3
 
+case $ok in 
+  1)
 if [ $num1 -eq $num2 ];
 then
   echo "equal"
@@ -14,3 +17,10 @@ else
     echo "num3 is greater"
   fi
 fi
+ ;;
+2)
+  echo "yeah idk"
+;;
+*)
+  echo "opop"
+esac
