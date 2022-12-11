@@ -42,6 +42,7 @@ void heapSort(Faculty fac[], int N)
     key_value(fac, i, 0);
   }
 }
+
 int main()
 {
   int N;
@@ -65,7 +66,7 @@ int main()
     printf("\nFaculty Subject code: %d",fac[i].faculty_subj_code);
     printf("\n");
   }
-  printf("\nSwap count: %d",count);
+  printf("\nSwap count: %d\n",count);
 
   return 0;
 }

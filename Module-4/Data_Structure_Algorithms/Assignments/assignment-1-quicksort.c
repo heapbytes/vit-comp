@@ -55,6 +55,7 @@ void quickSort(Faculty fac[], int low, int high) {
   }
 }
 
+
 int main() {
   int n, B[10];
   printf("Enter the total no. of faculty: ");
@@ -77,6 +78,6 @@ int main() {
     printf("\nFaculty subject_code: %d", fac[i].faculty_subject_code);
     printf("\n");
   }
-  printf("\nSwap count : %d", count);
+  printf("\nSwap count : %d\n", count);
   return 0;
 }
