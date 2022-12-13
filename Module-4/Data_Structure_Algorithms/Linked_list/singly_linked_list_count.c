@@ -6,7 +6,8 @@ struct node{
   struct node *link;
 };
 
-void count_heads(struct node *head){
+//void count_heads(struct node *head){ //this is another way of writing parameters
+void count_heads(void *head){
   int count=0;
   if(head == NULL){
     printf("Node is empty\n");
