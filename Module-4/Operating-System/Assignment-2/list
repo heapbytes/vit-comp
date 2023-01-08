@@ -1,0 +1,17 @@
+drwxr-xr-x lenon lenon 4.0 KB Wed Jan  4 07:08:12 2023 .
+drwxr-xr-x lenon lenon 4.0 KB Mon Dec  5 22:27:10 2022 ..
+.rwxr-xr-x lenon lenon 137 B  Tue Dec  6 15:03:15 2022 arguments.sh
+.rwxr-xr-x lenon lenon 230 B  Tue Dec  6 14:30:23 2022 basic-arithmetic.sh
+.rwxr-xr-x lenon lenon 129 B  Tue Dec  6 14:23:08 2022 even-odd.sh
+.rwxr-xr-x lenon lenon 121 B  Tue Jan  3 12:53:59 2023 factorial.sh
+.rwxr-xr-x lenon lenon 148 B  Tue Dec  6 15:46:39 2022 fibonacci.sh
+.rwxr-xr-x lenon lenon 238 B  Tue Dec  6 14:45:14 2022 forloop.sh
+.rwxr-xr-x lenon lenon 402 B  Tue Jan  3 13:20:15 2023 functions.sh
+.rwxr-xr-x lenon lenon 256 B  Tue Dec  6 16:15:02 2022 ifladder.sh
+.rw-r--r-- lenon lenon   0 B  Wed Jan  4 07:08:12 2023 list
+.rw-r--r-- lenon lenon 6.5 KB Wed Jan  4 07:01:16 2023 mydate
+.rw-r--r-- lenon lenon  21 B  Mon Dec  5 22:49:59 2022 nosfile
+.rw-r--r-- lenon lenon 6.5 KB Wed Jan  4 07:03:34 2023 outdate
+.rw-r--r-- lenon lenon 785 B  Tue Jan  3 13:55:22 2023 strings.sh
+.rwxr-xr-x lenon lenon 127 B  Tue Dec  6 14:53:27 2022 switch.sh
+.rwxr-xr-x lenon lenon  77 B  Tue Jan  3 13:48:35 2023 whileloop.sh
