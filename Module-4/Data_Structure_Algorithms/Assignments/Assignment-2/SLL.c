@@ -26,6 +26,9 @@ struct node *add_node(struct node *head, int data){
   }
   ptr->link = malloc(sizeof(struct node));
   ptr->link->data = data;
+  
+  return head;
+  //if you are too tired to return things use void to declare the functions, the updates will still reflect since we are playing with pointers :) 
 }
 
 struct node *delete_nodes(struct node *head){
