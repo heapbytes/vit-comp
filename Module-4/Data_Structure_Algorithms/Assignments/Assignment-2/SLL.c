@@ -18,6 +18,16 @@ void print_nodes(struct node *head){
   }
 }
 
+struct node *add_node(struct node *head, int data){
+  
+  struct node *ptr = head;
+  while(ptr->link !=NULL){
+    ptr = ptr->link;
+  }
+  ptr->link = malloc(sizeof(struct node));
+  ptr->link->data = data;
+}
+
 struct node *delete_nodes(struct node *head){
   if(head==NULL){
     printf("Node is empty");
@@ -47,6 +57,10 @@ int main(){
   printf("Printing data from nodes\n");
   print_nodes(head);
   
+  printf("\nInserting data\n");
+  add_node(head, 75);
+  print_nodes(head);
+
   printf("\nPrinting data after deleting the last node\n");
   delete_nodes(head);
   print_nodes(head);
