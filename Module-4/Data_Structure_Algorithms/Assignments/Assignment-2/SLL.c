@@ -51,17 +51,20 @@ int main(){
 
   struct node *head = malloc(sizeof(struct node));
   head->data = 45;
-  head->link = malloc(sizeof(struct node));
+  
+  /*head->link = malloc(sizeof(struct node));
   head->link->data = 55;
   head->link->link = malloc(sizeof(struct node));
   head->link->link->data = 65;
-  head->link->link->link = NULL;
+  head->link->link->link = NULL; */
 
   printf("Printing data from nodes\n");
   print_nodes(head);
   
   printf("\nInserting data\n");
   add_node(head, 75);
+  add_node(head, 85);
+  add_node(head, 95);
   print_nodes(head);
 
   printf("\nPrinting data after deleting the last node\n");
