@@ -7,6 +7,28 @@ struct node{
   struct node *next;
 };
 
+
+struct node *insert_node(struct node *head, int data){
+  struct node *ptr = head;
+  struct node *prev_n = ptr;
+  
+  while(ptr->next != NULL){
+    prev_n = ptr;
+    ptr = ptr->next;
+  }
+
+  struct node *new = malloc(sizeof(struct node));
+  new->prev = prev_n;
+  new->data = data;
+  new->next = NULL;
+
+  //adding the new node into the current links....
+  ptr->next = new;
+  new->prev = ptr;
+
+  return head;
+}
+
 void print_nodes(struct node *head){
   struct node *ptr = head;//malloc(sizeof(struct node));
   while(ptr!=NULL){
@@ -15,17 +37,14 @@ void print_nodes(struct node *head){
   }
 }
 
-struct node *delete_nodes(struct node *head){ 
-  
-  struct node *ptr = head;
-  
+struct node *delete_nodes(struct node *head){   
+  struct node *ptr = head; 
   while(ptr->next != NULL){
     ptr = ptr->next;
-    
-    if(ptr->next = NULL){
-      break;
-    }
     //printf("\ndatax = %d", ptr->data); //(45) 
+  }
+  if(ptr->next == NULL){
+    ptr->prev->next = NULL;    
   }
   return head;
 }
@@ -48,8 +67,8 @@ int main(){
   printf("Printing data from nodes\n");
   print_nodes(head);
   
-  printf("\nInserting data\n");
-  insert_node(35);
+  insert_node(head, 75);
+  insert_node(head, 85);
 
   printf("\nNode after insertion of data\n");
   print_nodes(head);
