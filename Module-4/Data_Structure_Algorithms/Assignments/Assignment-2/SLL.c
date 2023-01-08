@@ -25,8 +25,9 @@ struct node *add_node(struct node *head, int data){
     ptr = ptr->link;
   }
   ptr->link = malloc(sizeof(struct node));
-  ptr->link->data = data;
-  
+  ptr->link->data = data;  
+  ptr->link->link = NULL;
+
   return head;
   //if you are too tired to return things use void to declare the functions, the updates will still reflect since we are playing with pointers :) 
 }
@@ -51,7 +52,7 @@ int main(){
 
   struct node *head = malloc(sizeof(struct node));
   head->data = 45;
-  
+  head->link = NULL;
   /*head->link = malloc(sizeof(struct node));
   head->link->data = 55;
   head->link->link = malloc(sizeof(struct node));
