@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-// at = {0,1,3,3,} and bt = {1,9,1,9}  , time quantum = 1
+
+// at = {0,1,3,3} and bt = {1,9,1,9}  , time quantum = 1
 
 int main()
 {
@@ -44,6 +44,6 @@ int main()
 
     printf("\n\nAverage WT:  %0.2f", (wait_time * 1.0 / n));
     printf("\nAverage TAT: %0.2f\n", (turnaround_time * 1.0 / n));
-    
+
     return 0;
 }
