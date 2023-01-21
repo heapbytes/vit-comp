@@ -8,7 +8,6 @@ ll = []
 for i in range(0, sum(abt)):
 	l = [j for j in bt  if j[1] <= i]
 	l.sort(key=lambda x: x[0])
-	# print(l, l[0][2])
 	bt[bt.index(l[0])][0] -= 1
 	for k in bt:
 		if k[0] == 0:
