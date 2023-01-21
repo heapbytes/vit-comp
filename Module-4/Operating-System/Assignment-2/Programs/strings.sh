@@ -1,5 +1,3 @@
-# Finding the length of string 
-
 findLength (){
 	echo "Length of $1 is : ${#1}"
 	echo "Length of $2 is : ${#2}"
@@ -20,8 +18,7 @@ lower (){
 
 upper (){
 	res=$(echo $1 | tr '[a-z]' '[A-Z]');
-	res2=$(echo $2 | tr '[a-z]' '[A-Z]');
-	
+	res2=$(echo $2 | tr '[a-z]' '[A-Z]');	
 	echo "Upper Case of $1 is $res"
 	echo "Upper Case of $2 is $res2"
 }
@@ -31,11 +28,7 @@ slice (){
 }
 
 findLength $1 $2
-
 concat $1 $2 $3
-
 lower $1 $2
-
 upper $1 $2
-
 slice $1

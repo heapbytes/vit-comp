@@ -10,5 +10,5 @@ case $num in
   echo "2 is entered"
   ;;
 *)
-  echo "yeah idk"
+  echo "Exited"
 esac
