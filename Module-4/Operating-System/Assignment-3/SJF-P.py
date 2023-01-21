@@ -29,7 +29,7 @@ abt.pop(-1)
 at.pop(-1)
 print('AT\tBT\tFT\tTAT\tWT')
 for i in range(len(ct)):
-	print("{}\t{}\t{}\t{}\t{}\n".format(at[i],abt[i], ct[i], tat[i], wt[i]))
-print('Average Waiting Time = ', sum(wt)/len(wt))
+	print("{}\t{}\t{}\t{}\t{}".format(at[i],abt[i], ct[i], tat[i], wt[i]))
+print('\nAverage Waiting Time = ', sum(wt)/len(wt))
 print('Average Turnaround Time = ', sum(tat)/len(tat))
 
