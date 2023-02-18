@@ -1,0 +1,13 @@
+ Os work
+ Write a program to solve reader-writer problem using Mutex. 
+ Write a program to solve producer-consumer problem using semaphore
+ Write a program to solve reader-writer problem using semaphore
+ Write a program to solve producer-consumer problem using Mutex.
+ Write a program to solve dining philosopher problem using semaphore
+ Write a program to implement Banker’s algorithm.
+ 
+ 
+ Linux work
+ Write a shell script to sort an array of numbers using any sort method.
+ Write a Shell script to check whether given number is prime or not. Also print the reverse of the given number.
+ Write a shell script to check and count occurrence of a sub-string inthe givenstring using command line arguments. 
