@@ -1,0 +1,8 @@
+#!/bin/sh
+
+#Last edited by: G0urav <https://github.com/hepabytes>
+#This program helps saving time by automating the usage of gcc.
+#Usage e.g:
+#./runc <prgm.c>
+
+gcc "$1" -o "${1%.c}" && "./${1%.c}" && rm "${1%.c}"
