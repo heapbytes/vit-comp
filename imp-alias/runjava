@@ -1,0 +1,6 @@
+#!/bin/sh
+
+#Last edited by: G0urav <https://github.com/heapbytes\>
+#This prgm will help all linux users to automate java compilation task.
+
+javac "$1" && java "${1%.java}" && rm "${1%.java}.class"
