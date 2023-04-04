@@ -1,22 +1,21 @@
 import java.util.Scanner;
 
-public class Area{
-  
+class Shape {
+  double area() {
+    return 0;
+  }
 }
 
-public class areaFuncOverloading {
+public class areaFuncOverloading extends Shape {
 
-  //circle
   public double area(float PIE, int r){
     return PIE * ( r * r );
   }
 
-  //triangle
   public double area(int base, int height){
     return (base * height) / 2;
   }
 
-  //square
   public double area(int side){
     return side * side;
   }

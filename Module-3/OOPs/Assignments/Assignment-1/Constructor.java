@@ -8,7 +8,14 @@ class Student {
 
 {
     this.id = ++studentCount;
+    System.out.println("Instance block");
   }
+
+  static {
+        System.out.println("Static block");
+    }
+
+
 
   public Student() {
     this.name = "";
