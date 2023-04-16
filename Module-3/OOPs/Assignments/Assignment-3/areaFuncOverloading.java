@@ -1,10 +1,5 @@
 import java.util.Scanner;
 
-class Shape {
-  double area() {
-    return 0;
-  }
-}
 
 public class areaFuncOverloading extends Shape {
 
