@@ -100,6 +100,9 @@ int main(){
     printf("%d", key2[i]);
   }
 
+  free(key1);
+  free(key2);
+
   printf("\n");
   return 0;
 
