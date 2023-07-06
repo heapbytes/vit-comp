@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+
 void rot_cipher(char* inp, int shift, int size){
 
   char* rotstr = malloc(sizeof(char) * size);
