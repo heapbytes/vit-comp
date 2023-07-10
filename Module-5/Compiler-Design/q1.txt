@@ -1,0 +1,1 @@
+write an regular expression ... for the set of strings of {a nd b} that begin with either {aa or bb} and a optional {c} at the end
