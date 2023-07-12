@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
+//standard libraries are included in the following header file.
+#include "des.h"
 
 void leftshift(int arr[], int size, int shift){
 
