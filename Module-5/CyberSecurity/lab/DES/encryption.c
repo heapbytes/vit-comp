@@ -40,10 +40,10 @@ char* apply_ep(char* ip_2, char ep[]){
 }
 
 char* xor(char* val1, char val2[]){
-
   char* ans = (char*)malloc(sizeof(char) * 9); //increasing by 1 because array is used, at last we have to add \0.
   for(int i=0; i<8; i++){
-    ans[i] = val1[i] ^ val2[i];
+    ans[i] = '0' + (val1[i] ^ val2[i]);
+    //printf("%d ", val1[i] ^ val2[i]);
   }
   
   ans[8] = '\0';
@@ -78,10 +78,15 @@ int main(){
 
   //step 4 : encrypting on ans_eip (using k1) [ xoring ans_eip and k1 ]
   char* enc_1 = xor(ans_eip, k1);
-  printf("done enc\n");
-  printf("%s\n", enc_1);
+ //printf("%s\n", enc_1);
 
 
+  //step 5 : substituting nibble (taking enc_1)
+  char s0[4][4] = {"1032", "3210", "0213", "3132"};
+  char s1[4][4] = {"0123", "2013", "3010", "2103"};
+
+  char* row = get_row(enc_1);
+  char* col = get_col(enc_1);
   
 
 
