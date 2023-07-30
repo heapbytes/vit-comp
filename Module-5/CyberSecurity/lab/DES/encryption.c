@@ -1,5 +1,8 @@
 #include "des.h"
 
+
+char* get_bin()
+
 char* ip_on_p(char ip[], char p[]){
   
   char* ans = (char*)malloc(sizeof(char) * 8);
@@ -33,7 +36,7 @@ char* divide_key(char* ans_ip, char ip[], int position){
 char* apply_ep(char* ip_2, char ep[]){
   char* ans = (char*)malloc(sizeof(char) * 8);
   for(int i=0; i<8; i++){
-    ans[i] = ip_2[ep[i] - '1'];
+    ans[i] = i/getep[i] - '1'];
   }
   
   return ans;
@@ -85,8 +88,12 @@ int main(){
   char s0[4][4] = {"1032", "3210", "0213", "3132"};
   char s1[4][4] = {"0123", "2013", "3010", "2103"};
 
-  char* row = get_row(enc_1);
-  char* col = get_col(enc_1);
+  //getting row and column -> integers
+
+  char* bin_enc_1 = get_bin(s0, s1, enc_1);
+
+
+
   
 
 

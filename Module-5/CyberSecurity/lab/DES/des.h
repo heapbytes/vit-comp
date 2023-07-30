@@ -16,6 +16,7 @@ void apply_p10(int k, int k_1[], int k_2[]);
 char* ip_on_p(char ip[], char p[]);
 char* divide_key(char* ans_ip, char ip[], int position);
 char* apply_ep(char* ip_2, char ep[]);
+char* get_bin(char s0[], char s1[], char* enc);
 
 #endif
 
