@@ -1,23 +1,19 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
-
-// Maximum number of vertices in the graph
 #define MAX_VERTICES 100
 
-// Queue data structure for BFS
+
 struct Queue {
     int items[MAX_VERTICES];
     int front;
     int rear;
 };
 
-// Graph representation using adjacency matrix
 int graph[MAX_VERTICES][MAX_VERTICES];
 int visited[MAX_VERTICES];
 int vertices, edges;
 
-// Initialize a queue
 struct Queue* createQueue() {
     struct Queue* q = (struct Queue*)malloc(sizeof(struct Queue));
     q->front = -1;
@@ -25,7 +21,6 @@ struct Queue* createQueue() {
     return q;
 }
 
-// Enqueue an element to the queue
 void enqueue(struct Queue* q, int value) {
     if (q->rear == MAX_VERTICES - 1)
         printf("Queue is full");
@@ -37,7 +32,6 @@ void enqueue(struct Queue* q, int value) {
     }
 }
 
-// Dequeue an element from the queue
 int dequeue(struct Queue* q) {
     int item;
     if (q->front == -1)
@@ -81,15 +75,14 @@ int main() {
     printf("Enter the number of edges: ");
     scanf("%d", &edges);
 
-    // Initialize graph and visited array
-    for (int i = 0; i < vertices; ++i) {
+    for (int i = 0; i < vertices; i++) {
         visited[i] = 0;
-        for (int j = 0; j < vertices; ++j)
+        for (int j = 0; j < vertices; j++)
             graph[i][j] = 0;
     }
 
     printf("Enter the edges (format: vertex1 vertex2):\n");
-    for (int i = 0; i < edges; ++i) {
+    for (int i = 0; i < edges; i++) {
         int vertex1, vertex2;
         scanf("%d %d", &vertex1, &vertex2);
         graph[vertex1][vertex2] = 1;

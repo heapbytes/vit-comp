@@ -1,6 +1,5 @@
 from math import gcd
 
-#func not used lol
 def inverse_mod(e, phi):
 
     i = 1

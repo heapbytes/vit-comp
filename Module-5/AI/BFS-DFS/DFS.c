@@ -8,31 +8,26 @@ int graph[MAX_VERTICES][MAX_VERTICES];
 int visited[MAX_VERTICES];
 int vertices, edges;
 
-// Stack data structure for DFS
 struct Stack {
     int items[MAX_VERTICES];
     int top;
 };
 
-// Initialize a stack
 void initializeStack(struct Stack* stack) {
     stack->top = -1;
 }
 
-// Push an element onto the stack
 void push(struct Stack* stack, int value) {
     stack->top++;
     stack->items[stack->top] = value;
 }
 
-// Pop an element from the stack
 int pop(struct Stack* stack) {
     int item = stack->items[stack->top];
     stack->top--;
     return item;
 }
 
-// DFS algorithm
 void dfs(int startVertex) {
     struct Stack stack;
     initializeStack(&stack);
@@ -61,7 +56,6 @@ int main() {
     printf("Enter the number of edges: ");
     scanf("%d", &edges);
 
-    // Initialize graph and visited array
     for (int i = 0; i < vertices; ++i) {
         visited[i] = 0;
         for (int j = 0; j < vertices; ++j)
