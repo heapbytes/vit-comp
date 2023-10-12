@@ -60,18 +60,18 @@ public class AStar {
           current = current.parent;
         }
         Collections.reverse(path);
-  return path;
-}
+        return path;
+      }
 
       List<Node> children = new ArrayList<>();
       int[][] directions = {{0, -1}, 	//up
-        {0, 1}, 	//down
-        {-1, 0}, 	//left	
-        {1, 0}, 	//right
-        {-1, -1}, 	//d up-Left
-        {-1, 1}, 	//d up-right
-        {1, -1}, 	//d down-left
-        {1, 1}};	//d down-right
+      {0, 1}, 	//down
+      {-1, 0}, 	//left	
+      {1, 0}, 	//right
+      {-1, -1}, 	//d up-Left
+      {-1, 1}, 	//d up-right
+      {1, -1}, 	//d down-left
+      {1, 1}};	//d down-right
 
       for (int[] newPosition : directions) {
         int[] nodePosition = {currentNode.position[0] + newPosition[0], currentNode.position[1] + newPosition[1]};
@@ -86,6 +86,7 @@ public class AStar {
 
         Node newNode = new Node(currentNode, nodePosition);
         children.add(newNode);
+
       }
 
       for (Node child : children) {
@@ -125,21 +126,33 @@ public class AStar {
     {0, 1, 0, 0, 1},
     {0, 0, 0, 0, 0},
     };
+    
+    int c = 1;
+    for(int i=0; i<5; i++){
+      for(int j=0; j<5;j++){
+        System.out.print(c++ + " ");
+      }
+      System.out.print("\n");
+    }
 
-    System.out.print("Enter the start position (row, column):");
-    int startRow = scanner.nextInt();
-    int startCol = scanner.nextInt();
+    System.out.print("Enter the start position (range 1-25) : ");
+    int start_ = scanner.nextInt();
 
-    System.out.print("Enter the end position (row, column):");
-    int endRow = scanner.nextInt();
-    int endCol = scanner.nextInt();
+    System.out.print("Enter the end position (range 1-25) :");
+    int end_ = scanner.nextInt();
 
-    int[] start = {startRow, startCol};
-    int[] end = {endRow, endCol};
+    int rows = (start_ - 1) / 5;
+    int cols = (start_ - 1) % 5;
+
+    int rowe = (end_ - 1) / 5;
+    int cole = (end_ - 1) % 5;
+
+    int[] start = {rows, cols};
+    int[] end = {rowe, cole};
 
     List<int[]> path = astar(maze, start, end);
 
-  if (path != null) {
+    if (path != null) {
       System.out.println("Path:");
       for (int[] position : path) {
         System.out.println("(" + position[0] + ", " + position[1] + ")");
