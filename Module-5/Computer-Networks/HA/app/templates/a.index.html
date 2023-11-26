@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Network Information</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Network Information</h1>
+
+        <section>
+            <h2>Special Hello Packets</h2>
+            <ul>
+                {% for packet in network_info.special_hello_packets %}
+                    <li>From Router {{ packet.from }} to Router {{ packet.to }} - Network Address: {{ packet.network_address }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section>
+            <h2>Link State Packets</h2>
+            <ul>
+                {% for router, neighbors in network_info.link_state_packets.items() %}
+                    <li>Router {{ router }}: {{ neighbors }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section>
+            <h2>Link State Database</h2>
+            <ul>
+                {% for router, entries in network_info.link_state_database.items() %}
+                    <li>Router {{ router }}: {% for entry in entries %} ({{ entry[0] }}, Cost: {{ entry[1] }}) {% endfor %}</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section>
+            <h2>Shortest Path</h2>
+            <p>Path: {{ network_info.shortest_path.path }}<br>Cost: {{ network_info.shortest_path.cost }}</p>
+        </section>
+
+        <section>
+            <h2>Routing Table</h2>
+            {% for router, entries in network_info.routing_table.items() %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Network Address</th>
+                            <th>Cost</th>
+                            <th>Next Hop</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for entry in entries %}
+                            <tr>
+                                <td>{{ entry[0][0] }}</td>
+                                <td>{{ entry[0][1] }}</td>
+                                <td>{{ entry[1] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% endfor %}
+        </section>
+    </div>
+</body>
+</html>
+

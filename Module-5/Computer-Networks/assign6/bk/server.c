@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 
-#define PORT 12345
+#define PORT 12347
 #define BUFFER_SIZE 1024
 
 int main()

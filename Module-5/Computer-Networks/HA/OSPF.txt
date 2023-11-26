@@ -1,0 +1,112 @@
+[prathamesh@gan CourseProject]$ java OSPF
+Enter the number of routers: 5
+Enter the number of neighbors for Router 1: 3
+Enter neighbor router ID for Router 1: 4
+Enter the cost to neighbor: 4
+Enter neighbor router ID for Router 1: 2
+Enter the cost to neighbor: 2
+Enter neighbor router ID for Router 1: 5
+Enter the cost to neighbor: 5
+Enter the number of neighbors for Router 2: 2
+Enter neighbor router ID for Router 2: 1
+Enter the cost to neighbor: 1
+Enter neighbor router ID for Router 2: 3
+Enter the cost to neighbor: 3
+Enter the number of neighbors for Router 3: 3
+Enter neighbor router ID for Router 3: 4
+Enter the cost to neighbor: 4
+Enter neighbor router ID for Router 3: 2
+Enter the cost to neighbor: 2
+Enter neighbor router ID for Router 3: 5
+Enter the cost to neighbor: 5
+Enter the number of neighbors for Router 4: 2
+Enter neighbor router ID for Router 4: 1
+Enter the cost to neighbor: 1
+Enter neighbor router ID for Router 4: 3
+Enter the cost to neighbor: 3
+Enter the number of neighbors for Router 5: 2
+Enter neighbor router ID for Router 5: 1
+Enter the cost to neighbor: 1
+Enter neighbor router ID for Router 5: 3
+Enter the cost to neighbor: 3
+Enter the source router: 1
+Enter the destination router: 3
+Sending Special Hello Packets from Router 1...
+  Sending Special Hello to Router 2
+    Received Special Hello Packet from Router 1 to Router 2
+    Obtained Network Address: 192.168.1.1-2
+  Sending Special Hello to Router 4
+    Received Special Hello Packet from Router 1 to Router 4
+    Obtained Network Address: 192.168.1.1-4
+  Sending Special Hello to Router 5
+    Received Special Hello Packet from Router 1 to Router 5
+    Obtained Network Address: 192.168.1.1-5
+Sending Special Hello Packets from Router 2...
+  Sending Special Hello to Router 1
+    Received Special Hello Packet from Router 2 to Router 1
+    Obtained Network Address: 192.168.1.2-1
+  Sending Special Hello to Router 3
+    Received Special Hello Packet from Router 2 to Router 3
+    Obtained Network Address: 192.168.1.2-3
+Sending Special Hello Packets from Router 3...
+  Sending Special Hello to Router 2
+    Received Special Hello Packet from Router 3 to Router 2
+    Obtained Network Address: 192.168.1.3-2
+  Sending Special Hello to Router 4
+    Received Special Hello Packet from Router 3 to Router 4
+    Obtained Network Address: 192.168.1.3-4
+  Sending Special Hello to Router 5
+    Received Special Hello Packet from Router 3 to Router 5
+    Obtained Network Address: 192.168.1.3-5
+Sending Special Hello Packets from Router 4...
+  Sending Special Hello to Router 1
+    Received Special Hello Packet from Router 4 to Router 1
+    Obtained Network Address: 192.168.1.4-1
+  Sending Special Hello to Router 3
+    Received Special Hello Packet from Router 4 to Router 3
+    Obtained Network Address: 192.168.1.4-3
+Sending Special Hello Packets from Router 5...
+  Sending Special Hello to Router 1
+    Received Special Hello Packet from Router 5 to Router 1
+    Obtained Network Address: 192.168.1.5-1
+  Sending Special Hello to Router 3
+    Received Special Hello Packet from Router 5 to Router 3
+    Obtained Network Address: 192.168.1.5-3
+
+Link State Packets for Routers:
+Router 1:
+  Neighbors: [2, 4, 5]
+  Link State Packet for the Router: {2=1, 4=1, 5=1}
+Router 2:
+  Neighbors: [1, 3]
+  Link State Packet for the Router: {1=1, 3=2}
+Router 3:
+  Neighbors: [2, 4, 5]
+  Link State Packet for the Router: {2=2, 4=3, 5=3}
+Router 4:
+  Neighbors: [1, 3]
+  Link State Packet for the Router: {1=1, 3=3}
+Router 5:
+  Neighbors: [1, 3]
+  Link State Packet for the Router: {1=1, 3=3}
+
+Link State Database:
+Router 1: (2, Cost: 1) (4, Cost: 1) (5, Cost: 1)
+Router 2: (1, Cost: 1) (3, Cost: 2)
+Router 3: (2, Cost: 2) (4, Cost: 3) (5, Cost: 3)
+Router 4: (1, Cost: 1) (3, Cost: 3)
+Router 5: (1, Cost: 1) (3, Cost: 3)
+
+Shortest Path from Router 1 to Router 3:
+  Path: [1, 2, 3]
+  Cost: 3
+
+Enter the router ID to print the routing table: 1
+
+Routing Table for Router 1:
+Network Address      Cost       Next Hop
+-------------------------------------------------------
+192.168.1.2-1        1          Router 2
+192.168.1.4-1        1          Router 4
+192.168.1.5-1        1          Router 5
+[prathamesh@gan CourseProject]$

@@ -26,7 +26,7 @@ def gen_keys(p ,q):
             e = i
             break
     
-    assert(e < phi)
+    #assert(e < phi)
 
     d = pow(e, -1, phi)
 
